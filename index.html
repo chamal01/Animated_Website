@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">CHamAL</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Design</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Chamal Adhikaram</h2>
+        <a href="#sec" id="btn">Click</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Chamal Adhikaram (BSc.IT Undergraduate)</h2>
+        <p>As an aspiring IT professional, I am A.M.H. Chamal Adhikaram, a student at Sri Lanka International Buddhist Academy in Kandy, currently pursuing a BSc degree in IT. With a passion for programming and web design, I have acquired a range of skills
+            that make me proficient in various programming languages and design tools.
+            <br><br> I am an expert in HTML, CSS, JavaScript, PHP, Java, Python, React, and Flutter. Additionally, my abilities extend beyond coding, as I am proficient in creating stunning UI/UX designs and have a mastery of design tools such as Photoshop,
+            Illustrator, and Figma.
+            <br><br> My diverse skill set has made me a highly sought-after designer, with clients often coming to me for both front-end and back-end web design solutions. My ability to create websites that are not only visually appealing but also responsive
+            and user-friendly is one of the reasons clients trust me with their projects.
+            <br><br> As a professional, I take pride in my work, consistently delivering high-quality output that meets my clients' needs. I can handle multiple projects simultaneously while maintaining a keen attention to detail, ensuring that I deliver
+            exceptional results within tight deadlines.
+            <br><br> Beyond my technical skills, I am also a team player, always willing to collaborate with colleagues to ensure that projects are completed successfully. I am proactive in keeping up with the latest industry trends, regularly attending
+            workshops and seminars to enhance my skills and stay current with emerging technologies.
+            <br><br> In summary, my passion for IT, my diverse range of skills, and my commitment to delivering high-quality work make me an ideal candidate for any organization looking for a talented and reliable IT professional. Whether it's programming,
+            web design, UI/UX design, or any other IT-related task, I am confident that I can bring value to any project and exceed your expectations.</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+
+</body>
+
+</html>
